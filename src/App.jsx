@@ -1,3 +1,4 @@
+// App.jsx
 import { useState } from "react";
 import {
   TextField,
@@ -11,6 +12,9 @@ import RepoList from "./components/RepoList";
 
 function App() {
   const [username, setUsername] = useState("");
+  const [stars, setStars] = useState("");
+  const [createdAt, setCreatedAt] = useState("");
+  const [language, setLanguage] = useState("");
   const [showRepoList, setShowRepoList] = useState(false);
 
   const handleUsernameChange = (event) => {
@@ -41,11 +45,42 @@ function App() {
             fullWidth
             sx={{ marginBottom: "10px" }}
           />
+
+          {/* Nuevos campos de entrada para criterios de filtrado */}
+          <TextField
+            label="Número de Estrellas"
+            variant="outlined"
+            value={stars}
+            onChange={(event) => setStars(event.target.value)}
+            fullWidth
+            sx={{ marginBottom: "10px" }}
+          />
+
+          <TextField
+            label="Fecha de Creación (YYYY-MM-DD)"
+            variant="outlined"
+            value={createdAt}
+            onChange={(event) => setCreatedAt(event.target.value)}
+            fullWidth
+            sx={{ marginBottom: "10px" }}
+          />
+
+          <TextField
+            label="Idioma Predominante"
+            variant="outlined"
+            value={language}
+            onChange={(event) => setLanguage(event.target.value)}
+            fullWidth
+            sx={{ marginBottom: "10px" }}
+          />
+
           <Button type="submit" variant="contained" fullWidth>
             Buscar Repositorios
           </Button>
         </form>
-        {showRepoList && <RepoList username={username} />}
+
+        {/* Pasa los criterios de filtrado al componente RepoList */}
+        {showRepoList && <RepoList username={username} stars={stars} createdAt={createdAt} language={language} />}
       </Container>
     </div>
   );
