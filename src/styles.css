@@ -1,0 +1,26 @@
+/* styles.css */
+
+/* Estilos para la paginación horizontal */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .pagination ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .pagination li {
+    margin-right: 5px;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
