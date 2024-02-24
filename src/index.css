@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #80d6f8;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  justify-content: center;
 }
 
 h1 {
@@ -42,7 +43,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #30def5;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -54,15 +55,18 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media only screen and (max-width: 768px) {
+  /* Modificar el diseño para dispositivos móviles */
+
+  /* Ajustar el tamaño de fuente para dispositivos móviles */
+  body {
+    font-size: 16px;
   }
-  a:hover {
-    color: #747bff;
+
+  /* Cambiar el ancho del navbar para dispositivos móviles */
+  nav {
+    width: 100%;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+
+  /* Modificar otros estilos según sea necesario para dispositivos móviles */
 }

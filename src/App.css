@@ -27,16 +27,18 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media only screen and (max-width: 768px) {
+  /* Modificar el diseño para dispositivos móviles */
+
+  /* Ajustar el tamaño de fuente para dispositivos móviles */
+  body {
+    font-size: 16px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  /* Cambiar el ancho del navbar para dispositivos móviles */
+  nav {
+    width: 100%;
+  }
 
-.read-the-docs {
-  color: #888;
+  /* Modificar otros estilos según sea necesario para dispositivos móviles */
 }
