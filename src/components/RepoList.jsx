@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
+import '../index.css';
+import '../App.css';
+import '../App.jsx';
+import '../main.jsx';
 
 const RepoList = ({ username }) => {
   const [repos, setRepos] = useState([]);
